@@ -61,7 +61,8 @@ config :demo_wallaby_liveview, DemoWallabyLiveviewWeb.Endpoint,
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
       ~r"lib/demo_wallaby_liveview_web/{live,views}/.*(ex)$",
-      ~r"lib/demo_wallaby_liveview_web/templates/.*(eex)$"
+      ~r"lib/live_view_counter_web/templates/.*(eex)$",
+      ~r{lib/live_view_counter_web/live/.*(ex)$}
     ]
   ]
 

@@ -1,6 +1,8 @@
 defmodule DemoWallabyLiveviewWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :demo_wallaby_liveview
 
+  socket "/live", Phoenix.LiveView.Socket
+
   socket "/socket", DemoWallabyLiveviewWeb.UserSocket,
     websocket: true,
     longpoll: false
