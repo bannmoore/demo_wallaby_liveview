@@ -5,8 +5,10 @@ defmodule DemoWallabyLiveviewWeb.TaskController do
   alias DemoWallabyLiveview.ToDoLists.Task
 
   def index(conn, _params) do
-    tasks = ToDoLists.list_tasks()
-    render(conn, "index.html", tasks: tasks)
+    # tasks = ToDoLists.list_tasks()
+    # render(conn, "index.html", tasks: tasks)
+
+    render(conn, "index.html")
   end
 
   def new(conn, _params) do

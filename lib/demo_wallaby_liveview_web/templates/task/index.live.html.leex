@@ -1,0 +1,21 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= for task <- @tasks do %>
+      <tr>
+        <td><%= task.name %></td>
+        <td>
+          <span><%= link "Show", to: Routes.task_path(DemoWallabyLiveviewWeb.Endpoint, :show, task) %></span>
+          <span><%= link "Edit", to: Routes.task_path(DemoWallabyLiveviewWeb.Endpoint, :edit, task) %></span>
+          <span><%= link "Delete", to: Routes.task_path(DemoWallabyLiveviewWeb.Endpoint, :delete, task), method: :delete, data: [confirm: "Are you sure?"] %></span>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<span><%= link "New Task", to: Routes.task_path(DemoWallabyLiveviewWeb.Endpoint, :new) %></span>

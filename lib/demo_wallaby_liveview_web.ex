@@ -24,8 +24,6 @@ defmodule DemoWallabyLiveviewWeb do
       import Plug.Conn
       import DemoWallabyLiveviewWeb.Gettext
       alias DemoWallabyLiveviewWeb.Router.Helpers, as: Routes
-
-      import Phoenix.LiveView, only: [live_render: 2, live_render: 3]
     end
   end
 
@@ -44,6 +42,8 @@ defmodule DemoWallabyLiveviewWeb do
       import DemoWallabyLiveviewWeb.ErrorHelpers
       import DemoWallabyLiveviewWeb.Gettext
       alias DemoWallabyLiveviewWeb.Router.Helpers, as: Routes
+
+      import Phoenix.LiveView, only: [live_render: 2, live_render: 3]
     end
   end
 
