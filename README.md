@@ -30,4 +30,6 @@ mix deps.get
 mix ecto.setup
 cd assets && npm install
 cd ..
+
+mix phx.gen.html ToDoLists Task tasks name:string
 ```
