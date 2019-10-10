@@ -16,7 +16,7 @@ defmodule DemoWallabyLiveviewWeb.Router do
   scope "/", DemoWallabyLiveviewWeb do
     pipe_through :browser
 
-    get "/", PageController, :index
+    get "/", TaskController, :index
 
     resources "/tasks", TaskController
   end
