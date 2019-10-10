@@ -19,6 +19,7 @@ defmodule DemoWallabyLiveviewWeb.Router do
     pipe_through :browser
 
     get "/", TaskController, :index
+    live("/counter", LiveCounter)
 
     resources "/tasks", TaskController
   end
