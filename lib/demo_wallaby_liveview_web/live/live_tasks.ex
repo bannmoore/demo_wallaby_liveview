@@ -13,9 +13,7 @@ defmodule DemoWallabyLiveviewWeb.LiveTasks do
   end
 
   @impl true
-  def mount(_params, socket) do
-    tasks = ToDoLists.list_tasks()
-
+  def mount(%{tasks: tasks}, socket) do
     state = %{
       tasks: tasks
     }
