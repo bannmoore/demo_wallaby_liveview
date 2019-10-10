@@ -1,6 +1,11 @@
 defmodule DemoWallabyLiveviewWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :demo_wallaby_liveview
 
+  # Wallaby config
+  if Application.get_env(:engine, :sql_sandbox) do
+    plug Phoenix.Ecto.SQL.Sandbox
+  end
+
   socket "/live", Phoenix.LiveView.Socket
 
   socket "/socket", DemoWallabyLiveviewWeb.UserSocket,

@@ -43,7 +43,8 @@ defmodule DemoWallabyLiveview.MixProject do
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
-      {:phoenix_live_view, github: "phoenixframework/phoenix_live_view"}
+      {:phoenix_live_view, github: "phoenixframework/phoenix_live_view"},
+      {:wallaby, "~> 0.23.0", [runtime: false, only: :test]}
     ]
   end
 
@@ -57,7 +58,7 @@ defmodule DemoWallabyLiveview.MixProject do
     [
       "ecto.setup": ["ecto.create", "ecto.migrate", "run priv/repo/seeds.exs"],
       "ecto.reset": ["ecto.drop", "ecto.setup"],
-      test: ["ecto.create --quiet", "ecto.migrate", "test"]
+      test: ["ecto.create --quiet", "ecto.migrate", "test --exclude ui --exclude integration"]
     ]
   end
 end

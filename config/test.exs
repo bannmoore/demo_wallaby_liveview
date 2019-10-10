@@ -12,7 +12,11 @@ config :demo_wallaby_liveview, DemoWallabyLiveview.Repo,
 # you can enable the server option below.
 config :demo_wallaby_liveview, DemoWallabyLiveviewWeb.Endpoint,
   http: [port: 4002],
-  server: false
+  server: true
+
+config :demo_wallaby_liveview, :sql_sandbox, true
 
 # Print only warnings and errors during test
 config :logger, level: :warn
+
+config :wallaby, driver: Wallaby.Experimental.Chrome
