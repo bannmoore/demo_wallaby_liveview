@@ -2,7 +2,19 @@
 
 This repository demonstrates an issue with Wallaby and a certain type of LiveView component: namely, one that interacts with the database in its `mount` function.
 
-To run the Wallaby tests:
+Prerequisites: Your machine needs to have Elixir, Erlang, Node, PostgreSQL, and Phoenix. If you've never run a Phoenix app locally, check out [this installation guide](https://hexdocs.pm/phoenix/installation.html).
+
+First, get the code and run first-time setup:
+
+```
+git clone git@github.com:bannmoore/demo_wallaby_liveview.git
+cd demo_wallaby_liveview
+mix deps.get
+mix ecto.setup
+cd assets && npm install
+```
+
+Then, run the Wallaby tests:
 
 ```
 mix test --only ui
@@ -36,28 +48,6 @@ Last message: {:mount, Phoenix.LiveView.Channel}
     ** (EXIT) shutdown: "owner #PID<0.536.0> exited"
 .
 ```
-
-## Getting Started
-
-To start your Phoenix server:
-
-  * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.setup`
-  * Install Node.js dependencies with `cd assets && npm install`
-  * Start Phoenix endpoint with `mix phx.server`
-
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
-
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
-
-## Learn more
-
-  * Official website: http://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Mailing list: http://groups.google.com/group/phoenix-talk
-  * Source: https://github.com/phoenixframework/phoenix
-
 
 ## Commands Used to Build This App
 
